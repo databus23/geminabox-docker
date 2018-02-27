@@ -1,5 +1,7 @@
 FROM ruby:2.4-alpine
 
+LABEL maintainer="Cristian Bica <cristian.bica@gmail.com>"
+
 WORKDIR /app
 
 COPY Gemfile Gemfile
