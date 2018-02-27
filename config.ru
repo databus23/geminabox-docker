@@ -24,7 +24,7 @@ if ENV["GEMINABOX_USERNAME"] && ENV["GEMINABOX_PASSWORD"]
   end
 
   Geminabox::Server.before do
-    protected! if request.delete? || ENV["GEMINABOX_PRIVATE"].to_s == "true"
+    protected! if request.delete? || request.post? || ENV["GEMINABOX_PRIVATE"].to_s == "true"
   end
 end
 
