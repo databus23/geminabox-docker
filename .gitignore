@@ -17,3 +17,5 @@ coverage
 *.local
 
 *.orig
+.envrc
+data/
