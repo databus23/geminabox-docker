@@ -1,31 +1,56 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    builder (3.2.3)
-    faraday (0.14.0)
-      multipart-post (>= 1.2, < 3)
-    geminabox (1.0.0)
+    builder (3.2.4)
+    faraday (1.10.2)
+      faraday-em_http (~> 1.0)
+      faraday-em_synchrony (~> 1.0)
+      faraday-excon (~> 1.1)
+      faraday-httpclient (~> 1.0)
+      faraday-multipart (~> 1.0)
+      faraday-net_http (~> 1.0)
+      faraday-net_http_persistent (~> 1.0)
+      faraday-patron (~> 1.0)
+      faraday-rack (~> 1.0)
+      faraday-retry (~> 1.0)
+      ruby2_keywords (>= 0.0.4)
+    faraday-em_http (1.0.0)
+    faraday-em_synchrony (1.0.0)
+    faraday-excon (1.1.0)
+    faraday-httpclient (1.0.1)
+    faraday-multipart (1.0.4)
+      multipart-post (~> 2)
+    faraday-net_http (1.0.1)
+    faraday-net_http_persistent (1.2.0)
+    faraday-patron (1.0.0)
+    faraday-rack (1.0.0)
+    faraday-retry (1.0.3)
+    geminabox (2.1.0)
       builder
-      faraday
+      faraday (> 1.0, < 3.0)
       httpclient (>= 2.2.7)
       nesty
       reentrant_flock
-      sinatra (>= 1.2.7)
+      sinatra (~> 2.0)
     httpclient (2.8.3)
-    multipart-post (2.0.0)
-    mustermann (1.0.2)
+    multipart-post (2.2.3)
+    mustermann (2.0.2)
+      ruby2_keywords (~> 0.0.1)
     nesty (1.0.2)
-    puma (3.11.2)
-    rack (2.0.4)
-    rack-protection (2.0.1)
+    nio4r (2.5.8)
+    puma (5.6.5)
+      nio4r (~> 2.0)
+    rack (2.2.4)
+    rack-protection (2.2.2)
       rack
     reentrant_flock (0.1.1)
-    sinatra (2.0.1)
-      mustermann (~> 1.0)
-      rack (~> 2.0)
-      rack-protection (= 2.0.1)
+    ruby2_keywords (0.0.5)
+    sinatra (2.2.2)
+      mustermann (~> 2.0)
+      rack (~> 2.2)
+      rack-protection (= 2.2.2)
       tilt (~> 2.0)
-    tilt (2.0.8)
+    tilt (2.0.11)
 
 PLATFORMS
   ruby
@@ -35,4 +60,4 @@ DEPENDENCIES
   puma
 
 BUNDLED WITH
-   1.16.1
+   1.17.3

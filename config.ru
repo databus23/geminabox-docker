@@ -2,7 +2,6 @@ require "geminabox"
 
 Geminabox.allow_replace = !!ENV["GEMINABOX_ALLOW_REPLACE"]
 Geminabox.data = ENV.fetch("GEMINABOX_PATH", "/app/data")
-Geminabox.build_legacy = false
 
 if ENV["GEMINABOX_USERNAME"] && ENV["GEMINABOX_PASSWORD"]
   Geminabox::Server.helpers do

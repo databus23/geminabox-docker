@@ -1,6 +1,6 @@
 FROM ruby:2.4-alpine
 
-LABEL maintainer="Cristian Bica <cristian.bica@gmail.com>"
+LABEL source_repository=https://github.com/databus23/geminabox-docker
 
 WORKDIR /app
 
@@ -12,7 +12,7 @@ RUN \
   echo 'gem: --no-document' >> ~/.gemrc && \
   apk --update add --virtual build_deps build-base linux-headers openssl-dev && \
   bundle install --jobs=4 && \
-  bundle clean && \
+  bundle clean --force && \
   apk del  build_deps
 
 COPY . .
